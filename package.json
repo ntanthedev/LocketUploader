@@ -3,8 +3,6 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@ffmpeg/core": "^0.12.10",
-        "@ffmpeg/ffmpeg": "^0.12.15",
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
@@ -12,6 +10,7 @@
         "axios": "^1.7.3",
         "babel-plugin-module-resolver": "^5.0.2",
         "bootstrap": "^5.3.3",
+        "browser-image-compression": "^2.0.2",
         "classnames": "^2.5.1",
         "crypto-js": "^4.2.0",
         "customize-cra": "^1.0.0",
