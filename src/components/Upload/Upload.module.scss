@@ -65,6 +65,23 @@ input[type="file"] {
 .upload-area {
     .content {
         text-align: center;
+
+        .paste-hint {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #888;
+            
+            kbd {
+                display: inline-block;
+                padding: 2px 4px;
+                font-size: 0.8rem;
+                background-color: #f7f7f7;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+                margin: 0 2px;
+            }
+        }
     }
 
     .upload-icon {
@@ -218,4 +235,81 @@ input[type="file"] {
             padding: 4px 8px;
         }
     }
+}
+
+.processing-status {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border-left: 3px solid var(--primary-color);
+    font-size: 0.9rem;
+    color: #555;
+
+    .status-text {
+        margin-bottom: 5px;
+    }
+
+    .progress-bar {
+        height: 6px;
+        background-color: #e0e0e0;
+        border-radius: 3px;
+        overflow: hidden;
+        
+        .progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            width: 0;
+            transition: width 0.3s ease;
+            
+            &.indeterminate {
+                width: 30%;
+                animation: progress-bar-indeterminate 1.5s infinite linear;
+            }
+        }
+    }
+}
+
+@keyframes progress-bar-indeterminate {
+    0% {
+        margin-left: -30%;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+/* Modal crop ảnh */
+.cropper-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cropper-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.cropper-content {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: auto;
+  padding: 20px;
+  z-index: 1001;
 }

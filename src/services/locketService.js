@@ -17,6 +17,7 @@ export const login = async (email, password, onPleaseWait) => {
         return res.data;
     } catch (error) {
         clearTimeout(timeOutId);
+        console.error("Login error:", error?.response?.data || error.message);
         return null;
     }
 };
@@ -25,6 +26,10 @@ export const uploadMedia = async (file, caption, onPleaseWait) => {
     let timeOutId;
     try {
         const user = JSON.parse(miscFuncs.getCookie("user"));
+        if (!user) {
+            throw new Error("User not logged in");
+        }
+        
         const formData = new FormData();
 
         if (file.type.includes("image")) {
@@ -37,6 +42,8 @@ export const uploadMedia = async (file, caption, onPleaseWait) => {
             timeOutId = setTimeout(() => {
                 onPleaseWait();
             }, 10000);
+        } else {
+            throw new Error("Unsupported file type");
         }
 
         formData.append("caption", caption);
@@ -50,13 +57,17 @@ export const uploadMedia = async (file, caption, onPleaseWait) => {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
+                timeout: 60000 // 60 giây timeout
             },
         );
 
         clearTimeout(timeOutId);
         return res.data;
     } catch (error) {
-        clearTimeout(timeOutId);
+        if (timeOutId) {
+            clearTimeout(timeOutId);
+        }
+        console.error("Upload error:", error?.response?.data || error.message);
         throw error;
     }
 };
