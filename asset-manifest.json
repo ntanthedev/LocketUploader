@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/LocketUploader/static/css/main.5aef5325.css",
-    "main.js": "/LocketUploader/static/js/main.373e3a72.js",
-    "static/js/775.b266aadf.chunk.js": "/LocketUploader/static/js/775.b266aadf.chunk.js",
-    "static/js/453.ca3bca01.chunk.js": "/LocketUploader/static/js/453.ca3bca01.chunk.js",
-    "static/js/726.63e59fed.chunk.js": "/LocketUploader/static/js/726.63e59fed.chunk.js",
-    "static/media/locket-icon.png": "/LocketUploader/static/media/locket-icon.6012d27fb514267201ac.png",
-    "static/media/spinner.gif": "/LocketUploader/static/media/spinner.60d5e48c76dc7c6a0eaf.gif",
-    "static/media/eye.png": "/LocketUploader/static/media/eye.c19b9e3590579a3ec888.png",
-    "static/media/media-upload.jpg": "/LocketUploader/static/media/media-upload.715469f0db8db5ab5788.jpg",
-    "static/media/eye-slash.png": "/LocketUploader/static/media/eye-slash.54b3107d160578572bcc.png",
-    "index.html": "/LocketUploader/index.html",
-    "main.5aef5325.css.map": "/LocketUploader/static/css/main.5aef5325.css.map",
-    "main.373e3a72.js.map": "/LocketUploader/static/js/main.373e3a72.js.map",
-    "775.b266aadf.chunk.js.map": "/LocketUploader/static/js/775.b266aadf.chunk.js.map",
-    "453.ca3bca01.chunk.js.map": "/LocketUploader/static/js/453.ca3bca01.chunk.js.map",
-    "726.63e59fed.chunk.js.map": "/LocketUploader/static/js/726.63e59fed.chunk.js.map"
+    "main.css": "/static/css/main.5aef5325.css",
+    "main.js": "/static/js/main.fc3ff38a.js",
+    "static/js/775.b266aadf.chunk.js": "/static/js/775.b266aadf.chunk.js",
+    "static/js/453.ca3bca01.chunk.js": "/static/js/453.ca3bca01.chunk.js",
+    "static/js/726.63e59fed.chunk.js": "/static/js/726.63e59fed.chunk.js",
+    "static/media/locket-icon.png": "/static/media/locket-icon.6012d27fb514267201ac.png",
+    "static/media/spinner.gif": "/static/media/spinner.60d5e48c76dc7c6a0eaf.gif",
+    "static/media/eye.png": "/static/media/eye.c19b9e3590579a3ec888.png",
+    "static/media/media-upload.jpg": "/static/media/media-upload.715469f0db8db5ab5788.jpg",
+    "static/media/eye-slash.png": "/static/media/eye-slash.54b3107d160578572bcc.png",
+    "index.html": "/index.html",
+    "main.5aef5325.css.map": "/static/css/main.5aef5325.css.map",
+    "main.fc3ff38a.js.map": "/static/js/main.fc3ff38a.js.map",
+    "775.b266aadf.chunk.js.map": "/static/js/775.b266aadf.chunk.js.map",
+    "453.ca3bca01.chunk.js.map": "/static/js/453.ca3bca01.chunk.js.map",
+    "726.63e59fed.chunk.js.map": "/static/js/726.63e59fed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5aef5325.css",
-    "static/js/main.373e3a72.js"
+    "static/js/main.fc3ff38a.js"
   ]
 }
