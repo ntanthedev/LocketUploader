@@ -17,8 +17,21 @@ export const login = async (email, password, onPleaseWait) => {
         return res.data;
     } catch (error) {
         clearTimeout(timeOutId);
-        console.error("Login error:", error?.response?.data || error.message);
-        return null;
+        console.error("Login error details:", {
+            message: error?.response?.data?.message || error.message,
+            status: error?.response?.status,
+            statusText: error?.response?.statusText,
+            data: error?.response?.data,
+            isCORSError: error.message && error.message.includes('CORS')
+        });
+        return {
+            success: false,
+            error: {
+                message: error?.response?.data?.message || error.message,
+                status: error?.response?.status,
+                data: error?.response?.data
+            }
+        };
     }
 };
 

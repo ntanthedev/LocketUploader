@@ -36,17 +36,17 @@ const LoginModal = ({ handleAfterLogin, onPleaseWait, ...props }) => {
             onPleaseWait,
         );
 
-        if (res) {
+        if (res && !res.error) {
             handleAfterLogin(res);
         } else if (toast.isActive(toastId)) {
             toast.update(toastId, {
                 ...constants.toastSettings,
-                render: "Username or password is incorrect",
+                render: res?.error?.message || "Username or password is incorrect",
                 type: "error",
             });
         } else {
             toast.dismiss();
-            toast.error("Username or password is incorrect", {
+            toast.error(res?.error?.message || "Username or password is incorrect", {
                 ...constants.toastSettings,
             });
         }
