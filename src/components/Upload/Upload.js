@@ -430,7 +430,7 @@ const Upload = () => {
                                         className={cx("btn-delete-preview")}
                                         onClick={() => setPreviewUrl("")}
                                     >
-                                        <span>&times</span>
+                                        <span>x</span>
                                     </button>
                                 </div>
                             ) : (
