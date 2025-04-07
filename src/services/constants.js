@@ -1,8 +1,20 @@
+// Xác định môi trường hiện tại
+const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const isVercel = window.location.hostname.includes('vercel.app') || window.location.hostname.includes('ntannn.tech');
+
+// URLs cho từng môi trường
+const DIRECT_URLS = {
+    LOGIN_URL: "https://locketuploader-be-render.onrender.com/locket/login",
+    UPLOAD_MEDIA_URL: "https://locketuploader-be-render.onrender.com/locket/upload-media",
+};
+
+const PROXY_URLS = {
+    LOGIN_URL: "/api/login", 
+    UPLOAD_MEDIA_URL: "/api/upload-media",
+};
+
 const constants = {
-    apiRoutes: {
-        LOGIN_URL: "https://corsproxy.io/?https://locketuploader-be-render.onrender.com/locket/login",
-        UPLOAD_MEDIA_URL: "https://corsproxy.io/?https://locketuploader-be-render.onrender.com/locket/upload-media",
-    },
+    apiRoutes: isLocalhost ? DIRECT_URLS : (isVercel ? PROXY_URLS : DIRECT_URLS),
     toastSettings: {
         position: "bottom-right",
         autoClose: 2000,
