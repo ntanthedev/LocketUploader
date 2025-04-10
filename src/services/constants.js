@@ -1,8 +1,8 @@
 const constants = {
     apiRoutes: {
-        LOGIN_URL: "https://crossorigin.me/https://locketuploader-be-render.onrender.com/locket/login",
+        LOGIN_URL: "https://locketauth.hmuy.live/locket/login",
         UPLOAD_MEDIA_URL:
-            "https://crossorigin.me/https://locketuploader-be-render.onrender.com/locket/upload-media",
+            "https://locketauth.hmuy.live/locket/upload-media",
     },
     toastSettings: {
         position: "bottom-right",
